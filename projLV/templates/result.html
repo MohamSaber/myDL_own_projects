@@ -1,0 +1,38 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Detection Results</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            .container { max-width: 800px; margin: auto; }
+            video { max-width: 100%; }
+            ul { list-style-type: none; padding: 0; }
+            li { margin: 5px 0; }
+            a { color: #4CAF50; text-decoration: none; }
+            a:hover { text-decoration: underline; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Detection Results</h1>
+            <h3>Processed Video</h3>
+            <video width="640" controls>
+                <source src="{{ url_for('static', filename='output/' + video_url) }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Detected Unsafe Actions</h3>
+            {% if detections %}
+                <ul>
+                {% for detection in detections %}
+                    <li>{{ detection }}</li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No unsafe actions detected.</p>
+            {% endif %}
+            <p><a href="{{ url_for('upload_video') }}">Upload another video</a></p>
+        </div>
+    </body>
+    </html>
+    

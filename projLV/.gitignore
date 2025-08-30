@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+env/
+.venv/
+*/env/
+*/.venv/
+
+# Data & Weights
+*.zip
+*.mp4
+*.avi
+*.jpg
+*.png
+*.jpeg
+*.pt
+*.pth
+
+# Training outputs
+runs/
+results/
+logs/
