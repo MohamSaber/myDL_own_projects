@@ -1,0 +1,14 @@
+# Ignore environments
+env/
+*/env/
+.venv/
+*/.venv/
+
+# Ignore cache & compiled files
+__pycache__/
+*.pyc
+
+# Ignore data (لو عندك داتا ضخمة)
+*.csv
+*.h5
+*.pkl
