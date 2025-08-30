@@ -43,11 +43,11 @@ pip install -r requirements.txt
 
 Main libraries:
 
-* `torch`
+* `tensoeflow`
 * `ultralytics`
 * `opencv-python`
 * `numpy`
-* `matplotlib`
+* `pygame`
 
 ---
 
@@ -94,3 +94,4 @@ python src/detect.py --source path/to/video.mp4 --weights path/to/best.pt
 * **Mohamed Saber** — Machine Learning & Deep Learning Enthusiast
 
 ```
+
