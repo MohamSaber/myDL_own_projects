@@ -3,6 +3,7 @@ env/
 */env/
 .venv/
 */.venv/
+**venv/** #
 
 # Ignore cache & compiled files
 __pycache__/
