@@ -1,69 +1,74 @@
+# 🚗 Driver Alert System (YOLO-Based Driver Monitoring)
 
+A real-time driver monitoring system that detects unsafe driver behaviors using a **YOLO-based object detection model**. The system identifies actions such as **phone usage, drowsiness, distracted driving, and other risky behaviors**, then issues alerts to improve road safety.
 
 ---
 
-```markdown
-# 🚗 Driver Alert System (YOLO-based)
+## 📌 Features
 
-This project focuses on monitoring **driver behavior** (phone usage, drowsiness, unsafe actions) using a **YOLO model** for action recognition inside the car. The system provides alerts when dangerous activities are detected.
+* Real-time driver behavior detection
+* Detects phone usage and driver distraction
+* Drowsiness monitoring
+* YOLO-based deep learning model
+* Video inference support
+* Modular and easy-to-extend codebase
 
 ---
 
 ## 📂 Project Structure
-```
-```bash
-projLV/ (or renamed folder)
-├── notebooks/           # Jupyter notebooks for training/testing
-│    ├── train.ipynb
-│    └── inference.ipynb
-│
-├── src/                 # Core Python scripts
-│    ├── api\_loader.py
-│    ├── detect.py
-│    └── utils.py
-│
-├── configs/             # YOLO configuration files
-│    ├── data.yaml
-│    └── model.yaml
-│
-├── requirements.txt     # Python dependencies
-├── README.md            # Documentation
-└── .gitignore           # Ignore unnecessary files
 
-````
+```text
+Driver-Alert-System/
+├── notebooks/
+│   ├── train.ipynb          # Model training
+│   └── inference.ipynb      # Model testing
+│
+├── src/
+│   ├── api_loader.py
+│   ├── detect.py            # Inference script
+│   └── utils.py
+│
+├── configs/
+│   ├── data.yaml
+│   └── model.yaml
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
 
 ---
 
 ## ⚙️ Requirements
-- Python 3.9+
-- Install dependencies:
+
+* Python 3.9+
+* Install dependencies:
+
 ```bash
 pip install -r requirements.txt
-````
+```
 
-Main libraries:
+### Main Libraries
 
-* `tensoeflow`
-* `ultralytics`
-* `opencv-python`
-* `numpy`
-* `pygame`
+* TensorFlow
+* Ultralytics (YOLO)
+* OpenCV
+* NumPy
+* Pygame
 
 ---
 
-## 🚀 Usage
+## 🚀 Getting Started
 
-### 1. Training
+### Train the Model
 
-Run:
+Open and run:
 
 ```bash
 notebooks/train.ipynb
 ```
 
-### 2. Inference
-
-Run the model on a video:
+### Run Inference
 
 ```bash
 python src/detect.py --source path/to/video.mp4 --weights path/to/best.pt
@@ -73,25 +78,56 @@ python src/detect.py --source path/to/video.mp4 --weights path/to/best.pt
 
 ## 📊 Results
 
-* The model can detect driver actions such as texting, talking on the phone, drowsiness, and more.
-* Tested on multiple driving videos.
+The model is capable of detecting multiple driver behaviors, including:
 
-📥 **Download test videos:** [Google Drive Link](PUT_YOUR_LINK_HERE)
-📥 **Download trained weights:** [Google Drive Link](PUT_YOUR_LINK_HERE)
+* 📱 Phone usage
+* 😴 Drowsiness
+* 🚫 Distracted driving
+* ⚠️ Unsafe actions
+
+The system has been evaluated on multiple driving videos and demonstrates reliable real-time performance for driver monitoring applications.
+
+---
+
+## 📥 Resources
+
+**Test Videos**
+
+> Google Drive: `ADD_LINK_HERE`
+
+**Trained Model Weights**
+
+> Google Drive: `ADD_LINK_HERE`
 
 ---
 
 ## 📝 Notes
 
-* Large files (videos `.mp4`, model weights `.pt`) are not included in the repository.
-* Download them from the provided links above.
-* `.gitignore` excludes `env/`, `runs/`, `results/`, `*.mp4`, `*.pt`, etc.
+* Large assets such as `.pt` weights and `.mp4` videos are excluded from this repository.
+* Download them using the links above.
+* `.gitignore` excludes generated files including:
+
+  * `runs/`
+  * `results/`
+  * `*.pt`
+  * `*.mp4`
+  * virtual environments
+
+---
+
+## 🛠️ Tech Stack
+
+* Python
+* YOLO (Ultralytics)
+* TensorFlow
+* OpenCV
+* NumPy
+* Pygame
 
 ---
 
 ## 👨‍💻 Author
 
-* **Mohamed Saber** — Machine Learning & Deep Learning Enthusiast
+**Mohamed Saber**
 
-```
-
+Computer Engineering Graduate | Machine Learning & Deep Learning Engineer
